@@ -1,0 +1,30 @@
+package com.ja.freeboard.member.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/member/*")
+public class MemberController {
+	
+	
+	@RequestMapping("/login_page.do")
+	public String loginPage() {
+		
+		return "member/login_page";
+	}
+	
+	@RequestMapping("/join_member_page.do")
+	public String joinMemberPage() {
+				
+		return "member/join_member_page";
+	}
+	
+	@RequestMapping("/join_member_process.do")
+	public String joinMemberProcess(String member_id, int [] member_hobby) {
+		
+		return "";
+//		redirect
+	}
+	
+}

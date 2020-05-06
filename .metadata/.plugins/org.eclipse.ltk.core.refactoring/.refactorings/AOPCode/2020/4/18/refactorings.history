@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ja.aoptest.BoardService&apos; to &apos;BoardServiceImpl&apos;&#x0D;&#x0A;- Original project: &apos;AOPCode&apos;&#x0D;&#x0A;- Original element: &apos;com.ja.aoptest.BoardService&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ja.aoptest.BoardServiceImpl&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BoardService&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ja.aoptest{BoardService.java[BoardService" matchStrategy="1" name="BoardServiceImpl" qualified="false" references="true" similarDeclarations="false" stamp="1588036072974" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+package com.ja.freeboard.mapper;
+
+import com.ja.freeboard.vo.MemberVo;
+
+public interface MemberSQLMapper {
+
+	
+	public void insert(MemberVo vo);
+	
+}
