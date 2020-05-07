@@ -1,0 +1,14 @@
+package com.ja.freeboard.board.service;
+
+import org.springframework.stereotype.Service;
+
+import com.ja.freeboard.vo.BoardVo;
+
+@Service
+public class BoardServiceImpl {
+
+	public void writeContent(BoardVo boardVo) {
+	// Controller에 채워서 넘겨줌
+		
+	}
+}

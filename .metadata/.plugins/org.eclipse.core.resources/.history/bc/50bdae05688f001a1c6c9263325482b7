@@ -1,0 +1,18 @@
+package com.ja.freeboard.member.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ja.freeboard.mapper.MemberSQLMapper;
+import com.ja.freeboard.vo.MemberVo;
+
+@Service
+public class MemberServiceImpl {
+	
+	@Autowired
+	private MemberSQLMapper memberSQLMapper;
+	
+	public void joinMember(MemberVo vo) {
+		memberSQLMapper.insert(vo);
+	}
+}

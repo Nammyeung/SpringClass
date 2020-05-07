@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu May 07 16:18:44 KST 2020
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\5.0.7.RELEASE\\spring-web-5.0.7.RELEASE.jar=C\:\\dev\\apache-tomcat-8.5.53\\wtpwebapps\\SpringMVCFinal\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
+org.eclipse.jst.jee.server\:SpringMVCFinal=C\:\\dev\\apache-tomcat-8.5.53\\wtpwebapps\\SpringMVCFinal

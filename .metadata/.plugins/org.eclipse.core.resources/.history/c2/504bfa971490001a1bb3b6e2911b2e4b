@@ -1,0 +1,33 @@
+package com.ja.freeboard.board.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ja.freeboard.board.service.BoardServiceImpl;
+import com.ja.freeboard.vo.BoardVo;
+
+@Controller
+@RequestMapping("/board/*")
+public class BoardController {
+	
+	private BoardServiceImpl boardServiceImpl;	
+	
+	@RequestMapping("/main_page.do")
+	public String mainPage() {
+		
+		return "board/main_page";
+	}
+	@RequestMapping("/write_content_page.do")
+	public String writeContentPage() {
+		
+		return "/board/write_content_page";
+	}
+	@RequestMapping("/write_content_process.do")
+	public String wrtieContentProcess(BoardVo boardVo) {
+		
+		
+		
+		return "redirect:./board/main_page.do";
+	}
+	
+}

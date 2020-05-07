@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace : 인터페이스명 -->
+<mapper namespace = "com.ja.freeboard.mapper.BoardSQLMapper">
+
+	<insert id="insert">
+	<!-- id : 메소드명 -->
+	<![CDATA[
+		INSERT INTO FB_Board
+		VALUES(FB_Board_seq.nextval, 
+		#{member_no}, 
+		#{board_title}, 
+		#{board_content}, 
+		0, 
+		SYSDATE
+		)
+	]]>	
+	</insert>
+	<!-- id : 메소드명 -->
+	<select id="selectByNo">
+	<![CDATA[
+		SELECT * FROM FB_Board WHERE board_no = #{no}
+	]]>
+	</select>
+	<!-- id : 메소드명 -->
+	<select id="selectAll">
+	<![CDATA[
+		SELECT * FROM FB_Board ORDER BY board_no DESC 
+	]]>
+	</select>
+	
+	
+</mapper>

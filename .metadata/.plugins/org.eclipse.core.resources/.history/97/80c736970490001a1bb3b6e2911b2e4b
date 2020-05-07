@@ -1,0 +1,5 @@
+package com.ja.freeboard.board.controller;
+
+public class BoardController {
+
+}

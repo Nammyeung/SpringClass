@@ -1,0 +1,8 @@
+package com.ja.freeboard.mapper;
+
+
+public interface BoardSQLMapper {
+	
+	
+	public void insert(BoardVo xxx);
+}
