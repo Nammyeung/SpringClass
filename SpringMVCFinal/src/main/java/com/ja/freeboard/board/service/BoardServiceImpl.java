@@ -45,4 +45,37 @@ public class BoardServiceImpl {
 				
 		return list;
 	}
+	
+	public Map<String, Object> getBoard(int board_no) {
+		
+		Map<String, Object> map =
+				new HashMap<String, Object>();
+		
+		boardSQLMapper.updateReadCount(board_no);
+				
+		BoardVo boardVo = boardSQLMapper.selectByNo(board_no);
+		MemberVo memberVo = memberSQLMapper.selectByNo(boardVo.getMember_no());
+//		memberSQLMapper.selectByNo(boardVo.getBoard_no());
+		
+		map.put("memberVo", memberVo);
+		map.put("boardVo", boardVo);
+		// map계열은 순서가 없다.
+		
+		
+		return map;
+	}	
+	
+	public void deleteContent(int board_no) {
+	
+		boardSQLMapper.deleteByNo(board_no);
+	}
+	
+	public void updateContent(BoardVo boardVo) {
+		
+		boardSQLMapper.update(boardVo);
+		
+	}
+	
+	
+	
 }

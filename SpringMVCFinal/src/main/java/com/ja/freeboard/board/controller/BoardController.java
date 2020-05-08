@@ -37,7 +37,7 @@ public class BoardController {
 		return "/board/write_content_page";
 	}
 	@RequestMapping("/write_content_process.do")
-	public String wrtieContentProcess(BoardVo boardVo, HttpSession session) {
+	public String writeContentProcess(BoardVo boardVo, HttpSession session) {
 		//session은 Object로 들어가기 때문에 형변환을 해야한다.
 		MemberVo memberVo = (MemberVo)session.getAttribute("sessionUser");
 		
@@ -47,5 +47,43 @@ public class BoardController {
 				
 		return "redirect:/board/main_page.do";
 	}
+	
+	@RequestMapping("/read_content_page.do")
+	public String readContentPage(int board_no, Model model) {
+		
+		Map<String, Object> map = 
+				boardService.getBoard(board_no);
+		
+		model.addAttribute("aaaa", map);
+			
+		return "board/read_content_page";
+	}
+	
+	@RequestMapping("/delete_content_process.do")
+	public String deleteContent(int board_no) {		
+		boardService.deleteContent(board_no);		
+		return "redirect:/board/main_page.do";
+	}
+	
+	@RequestMapping("/update_content_page.do")
+	public String updateContentPage(int board_no, Model model) {
+//		model에 담아서 포워딩(forwarding)
+		
+		model.addAttribute("data", boardService.getBoard(board_no));
+//		Map<String, Object> boardService.getBoard(board_no);
+		
+		
+		return "board/update_content_page";
+	}
+	
+	@RequestMapping("/update_content_process.do")
+	public String updateContentProcess(BoardVo vo) {
+		
+		boardService.updateContent(vo);
+		
+		
+		return "redirect:/board/main_page.do";
+	}
+	
 	
 }

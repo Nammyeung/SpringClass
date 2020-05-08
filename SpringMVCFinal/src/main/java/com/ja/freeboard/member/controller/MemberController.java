@@ -57,6 +57,13 @@ public class MemberController {
 			// 슬래시(/)로 받을 때
 		}	
 	}
+	@RequestMapping("/logout_process.do")
+	public String logoutProcess(HttpSession session) {
+		
+		session.invalidate();
+		
+		return "redirect:/board/main_page.do";
+	}
 
 }
 

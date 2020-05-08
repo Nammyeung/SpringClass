@@ -15,5 +15,7 @@ public interface BoardSQLMapper {
 	
 	public void deleteByNo(int no);
 	
-	public void update(BoardVo vo);	
+	public void update(BoardVo vo);
+	
+	public void updateReadCount(int no);
 }
