@@ -29,6 +29,17 @@ crossorigin="anonymous">
 		<div class = "col-2"></div>
 		
 		<div class = "col">
+		<form action = "./main_page.do" method = "get">
+			<div class = "row my-3">
+				<div class = "col"></div>
+				<div class = "col-8">
+					<input name = "search_word" type="text" class = "form-control">
+				</div>
+				<div class = "col-2">
+					<input type="submit" class = "btn btn-primary btn-block" value = "검색">
+				</div>					
+			</div>
+		</form>
 			<div class = "row"><!--  테이블 -->
 				<div class = "col">
 					<table class = "table table-hover">
@@ -59,15 +70,19 @@ crossorigin="anonymous">
 			<div class = "row mt-3"><!--  버튼들... -->
 				<div class="col-8"><!-- 페이지 버튼 -->
 				<nav aria-label="Page navigation example">
-				  	<ul class="pagination">
-				    <li class="page-item"><a class="page-link" href="#">이전</a></li>
-				    <li class="page-item"><a class="page-link" href="#">1</a></li>
-				    <li class="page-item"><a class="page-link" href="#">2</a></li>
-				    <li class="page-item active"><a class="page-link" href="#">3</a></li>
-				    <li class="page-item"><a class="page-link" href="#">4</a></li>
-				    <li class="page-item"><a class="page-link" href="#">5</a></li>
-				    <li class="page-item"><a class="page-link" href="#">다음</a></li>
-  					</ul>
+				  	   <ul class="pagination">
+					  
+					    <li class="page-item<c:if test="${beginPage-1 <= 0}"> disabled</c:if>"><a class="page-link" href="./main_page.do?currPage=${beginPage-1 }&search_word=${param.search_word}">이전</a></li>
+					  	<c:forEach begin="${beginPage }" end="${endPage }" var="i">
+					  		<li class="page-item<c:if test="${currPage==i}"> active</c:if>"><a class="page-link" href="./main_page.do?currPage=${i}&search_word=${param.search_word}">${i}</a></li>
+					  	</c:forEach>
+					    <li class="page-item<c:if test="${endPage+1 > (totalCount-1)/10+1 }"> disabled</c:if>"><a class="page-link" href="./main_page.do?currPage=${endPage+1 }&search_word=${param.search_word}">다음</a></li>
+					  <!-- 
+					    <li class="page-item disabled"><a class="page-link" href="#">이전</a></li>
+					    <li class="page-item active"><a class="page-link" href="#">4</a></li>
+				     -->
+					  </ul>
+					  
 				</nav>
 				</div>
 				<div class="col">

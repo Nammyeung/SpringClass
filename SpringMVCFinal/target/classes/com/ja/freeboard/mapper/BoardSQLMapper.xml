@@ -18,27 +18,75 @@
 		)
 	]]>	
 	</insert>
+	
+	
 	<!-- id : 메소드명 -->
 	<select id="selectByNo" resultType="com.ja.freeboard.vo.BoardVo">
 	<![CDATA[
 		SELECT * FROM FB_Board WHERE board_no = #{no}
 	]]>
 	</select>
+	
+	
+	
 	<!-- id : 메소드명 -->
 	<select id="selectAll" resultType="com.ja.freeboard.vo.BoardVo">
-<!-- <if test="">
-	
-	</if> -->
-	
 	<![CDATA[
-		SELECT * FROM FB_Board ORDER BY board_no DESC 
+		SELECT * 
+		FROM (
+    		SELECT ROWNUM rnum, t1.* 
+    		FROM (
+        		SELECT * 
+        		FROM FB_Board 
+        		ORDER BY board_no DESC) t1
+    	) t2
+	WHERE t2.rnum >= (#{currPage}-1)*10+1 AND t2.rnum <= #{currPage}*10 
 	]]>
 	</select>
+	
+	
+	
+	
+	<select id="selectByTitle" resultType="com.ja.freeboard.vo.BoardVo">
+	<![CDATA[
+		SELECT * 
+		FROM (
+    		SELECT ROWNUM rnum, t1.* 
+    		FROM (
+        		SELECT * 
+        		FROM FB_Board 
+        		WHERE board_title LIKE '%'||#{title}||'%'
+        		ORDER BY board_no DESC) t1
+    	) t2
+	WHERE t2.rnum >= (#{currPage}-1)*10+1 AND t2.rnum <= #{currPage}*10
+	]]>
+	</select>
+	
+<!-- <if test="">
+	</if> -->
+	
+	                                                                                                                    
+	<select id = "selectAllCount" resultType = "int">
+	<![CDATA[
+		SELECT COUNT(*) FROM FB_Board
+	]]>
+	</select>
+	
+	<select id = "selectByTitleCount" resultType = "int">
+	<![CDATA[
+		SELECT COUNT(*) FROM FB_Board WHERE board_title LIKE '%' ||#{title}|| '%'
+
+	]]>
+	</select>
+	
 	<delete id="deleteByNo">
 	<![CDATA[
 		DELETE FROM FB_Board WHERE board_no = #{no}
 	]]>
 	</delete>
+	
+	
+	
 	<update id="update">
 	<![CDATA[
 		UPDATE FB_Board 
@@ -49,10 +97,22 @@
 			board_no = #{board_no}
 	]]>
 	</update>
+	
+	
+	
 	<update id = "updateReadCount">
 		UPDATE FB_board
 		SET board_readcount = board_readcount+1
 		WHERE board_no = #{no}	
 	</update>
 	
+	
+	
+	
 </mapper>
+
+
+<!-- resultType : The fully qualified class name or alias for the expected type that will be returned from this statement. Note that in the case of collections, this should be the type that the collection contains, not the type of the collection itself. Use resultType OR resultMap, not both.
+resultMap : A named reference to an external resultMap. Result maps are the most powerful feature of MyBatis, and with a good understanding of them, many difficult mapping cases can be solved. Use resultMap OR resultType, not both.
+
+출처: https://dorongdogfoot.tistory.com/124 [도롱 the Dog Foot] -->

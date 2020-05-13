@@ -2,6 +2,8 @@ package com.ja.freeboard.mapper;
 
 import java.util.*;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.ja.freeboard.vo.BoardVo;
 
 public interface BoardSQLMapper {
@@ -11,7 +13,14 @@ public interface BoardSQLMapper {
 	
 	public BoardVo selectByNo(int no);
 	
-	public List<BoardVo> selectAll();
+	public int selectAllCount();
+	public int selectByTitleCount(String title);
+	
+	public List<BoardVo> selectAll(int currPage);
+	
+	public List<BoardVo> selectByTitle(
+			@Param("title") String title,
+			@Param("currPage") int currPage);
 	
 	public void deleteByNo(int no);
 	

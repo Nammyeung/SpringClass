@@ -22,12 +22,38 @@ public class BoardServiceImpl {
 		boardSQLMapper.insert(boardVo);		
 	}
 	
-	public List<Map<String,Object>> getBoardList(){
+	
+	public int getBoardDataCount(String searchWord) {
+		
+		if(searchWord == null) {
+			return boardSQLMapper.selectAllCount();
+		}else {
+			return boardSQLMapper.selectByTitleCount(searchWord);
+		}
+		
+		
+	}
+	
+	
+	public List<Map<String,Object>> getBoardList(String searchWord , int currPage){
+		
+		
 		List<Map<String,Object>> list =
 				new ArrayList<>();
 		
-		List<BoardVo> boardList =
-				boardSQLMapper.selectAll();
+		List<BoardVo> boardList = null;
+		
+		if(searchWord == null) {
+			boardList =
+					boardSQLMapper.selectAll(currPage);
+					
+		} else {
+			boardList =
+					boardSQLMapper.selectByTitle(searchWord, currPage);
+		}
+		
+			
+		
 		
 		for(BoardVo boardVo : boardList) {
 			
@@ -45,6 +71,8 @@ public class BoardServiceImpl {
 				
 		return list;
 	}
+	
+	
 	
 	public Map<String, Object> getBoard(int board_no) {
 		
