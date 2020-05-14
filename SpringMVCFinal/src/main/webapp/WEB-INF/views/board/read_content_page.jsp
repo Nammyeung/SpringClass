@@ -12,55 +12,8 @@ crossorigin="anonymous">
 <title>Insert title here</title>
 </head>
 <body>
-<div class = "row mt-5">
-	<div class = "col-xs-2 col-md-2"></div>
-		<div class = "col-xs-8 col-md-8">
-			<h2 class = "text-center">게시글 보기</h2><p>&nbsp;</p>
-	<div class = "table table-responsive">
-		<table class = "table">
-		<tr>
-			<th class = "success">글번호</th>
-			<td>${aaaa.boardVo.board_no }</td>
-			<th class = "success">조회수</th>
-			<td>${aaaa.boardVo.board_readcount }</td>
-		</tr>
-		
-		<tr>
-			<th class = "success">작성자</th>
-			<td>${aaaa.memberVo.member_nick }</td>
-			<th class = "success">작성일</th>
-			<td>${aaaa.boardVo.board_writedate }</td>
-		</tr>
-		
-		<tr>
-			<th class = "success">이메일</th>
-			<td colspan="3">xxxxx@naver.com</td>
-		</tr>
-		
-		<tr>
-			<th class = "success">제목</th>
-			<td colspan="3">${aaaa.boardVo.board_title }</td>
-		</tr>
-		
-		<tr>
-			<th class = "success">글 내용</th>
-			<td colspan="3">${aaaa.boardVo.board_content }</td>
-		</tr>
-		
-		<tr>
-			<td colspan="4" class = text-center">
-			<c:if test="${!empty sessionUser && sessionUser.member_no == aaaa.memberVo.member_no }">
-			<a href = "${pageContext.request.contextPath}/board/delete_content_process.do?board_no=${aaaa.boardVo.board_no}">삭제</a>
-			<a href = "${pageContext.request.contextPath}/board/update_content_page.do?board_no=${aaaa.boardVo.board_no}">수정</a>
-			</c:if>
-			</td>
-		</tr>				
-		</table>
-	</div>
-	</div>
-</div>		
-		
-<%-- 제목 : ${aaaa.boardVo.board_title }<br>
+
+제목 : ${aaaa.boardVo.board_title }<br>
 글쓴이 : ${aaaa.memberVo.member_nick }<br>
 조회수 : ${aaaa.boardVo.board_readcount }<br>
 내용 : <br>
@@ -69,10 +22,10 @@ ${aaaa.boardVo.board_content }<br>
 
 <a href="${pageContext.request.contextPath}/board/main_page.do">목록으로</a>
 
-<c:if test="${!empty sessionUser && sessionUser.member_no == aaaa.memberVo.member_no }">
-<a href = "${pageContext.request.contextPath}/board/delete_content_process.do?board_no=${aaaa.boardVo.board_no}">삭제</a>
-<a href = "${pageContext.request.contextPath}/board/update_content_page.do?board_no=${aaaa.boardVo.board_no}">수정</a>
-</c:if> --%>
+<c:if test="${!empty sessionUser &&  sessionUser.member_no == aaaa.memberVo.member_no}">
+<a href="${pageContext.request.contextPath}/board/delete_content_process.do?board_no=${aaaa.boardVo.board_no}">삭제</a>
+<a href="${pageContext.request.contextPath}/board/update_content_page.do?board_no=${aaaa.boardVo.board_no}">수정</a>
+</c:if>
 
 
 
