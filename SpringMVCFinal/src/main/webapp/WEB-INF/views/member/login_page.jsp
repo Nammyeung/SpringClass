@@ -50,6 +50,7 @@ crossorigin="anonymous">
 					<a class="btn btn-outline-primary btn-block" href="./join_member_page.do">회원 가입</a>
 				</div>
 			</div>
+			
 		</div>
 		<div class="col-3"></div>
 	</div>

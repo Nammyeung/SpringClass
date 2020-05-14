@@ -5,7 +5,10 @@ import org.springframework.stereotype.Service;
 
 import com.ja.freeboard.mapper.HobbySQLMapper;
 import com.ja.freeboard.mapper.MemberSQLMapper;
+import com.ja.freeboard.util.FBMessageDigest;
 import com.ja.freeboard.vo.MemberVo;
+
+import java.security.*;
 
 @Service
 public class MemberServiceImpl {
@@ -18,6 +21,48 @@ public class MemberServiceImpl {
 	
 	
 	public void joinMember(MemberVo vo, int [] member_hobby) {
+		
+		String hashCode = FBMessageDigest.digest(vo.getMember_pw());
+		vo.setMember_pw(hashCode);
+		
+//		//비밀번호 해싱....
+//				try {
+//					
+//					String hashCode = "";
+//					
+//					StringBuilder sb = new StringBuilder();
+//					
+//					MessageDigest messageDigest 
+//						 = MessageDigest.getInstance("SHA-1"); 
+//					
+//					messageDigest.reset();
+//					messageDigest.update(vo.getMember_pw().getBytes());
+//					
+//					byte[] chars = messageDigest.digest();
+//					
+//					for(int i = 0 ; i < chars.length ; i++) {
+//						
+//						String tmp = Integer.toHexString(chars[i] & 0xff);
+//						
+//						if(tmp.length() == 1) {
+//							sb.append("0");
+//						}
+//						
+//						sb.append(tmp);
+//					}
+//
+//					hashCode = sb.toString();
+//					
+//					vo.setMember_pw(hashCode);
+//					
+//				}catch(Exception e) {
+//					e.printStackTrace();
+//				}
+//			
+//		
+		
+		
+		//DB연동...
 		
 		int member_key = memberSQLMapper.createKey();
 		
@@ -42,8 +87,11 @@ public class MemberServiceImpl {
 	public MemberVo login(MemberVo vo) {
 		// mapper해서 나온 결과를 그대로 세션에 넣음.
 		
+		String hashCode = FBMessageDigest.digest(vo.getMember_pw());
+		vo.setMember_pw(hashCode);
+		
 		return memberSQLMapper.selectByIdAndPw(vo);
 		
-		
+	
 	}
 }

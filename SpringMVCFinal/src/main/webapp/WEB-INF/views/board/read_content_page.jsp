@@ -20,6 +20,14 @@ crossorigin="anonymous">
 ${aaaa.boardVo.board_content }<br>
 <br>
 
+<c:forEach items="${aaaa.fileVoList }" var = "fileVo">
+	<img src="/upload/${fileVo.file_link_path }">
+</c:forEach>
+
+
+
+
+
 <a href="${pageContext.request.contextPath}/board/main_page.do">목록으로</a>
 
 <c:if test="${!empty sessionUser &&  sessionUser.member_no == aaaa.memberVo.member_no}">

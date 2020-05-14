@@ -8,6 +8,8 @@ import com.ja.freeboard.vo.BoardVo;
 
 public interface BoardSQLMapper {
 	
+	public int createKey();	
+	
 	// annoation해서 select를 매핑 => 변경
 	public void insert(BoardVo boardVo);
 	

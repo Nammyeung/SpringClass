@@ -24,6 +24,7 @@ public class BoardVo {
 		this.board_readcount = board_readcount;
 		this.board_writedate = board_writedate;
 	}
+	
 	public int getBoard_no() {
 		return board_no;
 	}

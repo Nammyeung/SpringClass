@@ -11,10 +11,10 @@ crossorigin="anonymous">
 <script type = "text/javascript">
 
 function frm_submit(){
-	var frm = document.getElementById("frmqqq");
+	var frm = document.getElementById("frm");
 
 	//유효성 검사
-	var idBox = document.getElementById("idqqq");
+	var idBox = document.getElementById("id");
 	
 	
 	//ID 유효성....이메일 검사

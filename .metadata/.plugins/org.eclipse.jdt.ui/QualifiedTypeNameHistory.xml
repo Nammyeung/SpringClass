@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.xml.ws.RequestWrapper"/>
-<fullyQualifiedTypeName name="polymorphism.TV"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="polymorphism.LgTv"/>
 <fullyQualifiedTypeName name="polymorphism.SamsungTv"/>
@@ -29,16 +27,11 @@
 <fullyQualifiedTypeName name="javax.annotation.Resource"/>
 <fullyQualifiedTypeName name="com.ja.freeboard.mapper.service.MemberServiceImpl"/>
 <fullyQualifiedTypeName name="com.ja.freeboard.vo.HobbyVo"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 <fullyQualifiedTypeName name="com.ja.freeboard.mapper.HobbySQLMapper"/>
 <fullyQualifiedTypeName name="com.ja.freeboard.board.service.BoardServiceImpl"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-<fullyQualifiedTypeName name="com.ja.freeboard.mapper.BoardSQLMapper"/>
 <fullyQualifiedTypeName name="com.ja.freeboard.mapper.MemberSQLMapper"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="com.ja.freeboard.vo.BoardVo"/>
@@ -53,4 +46,18 @@
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Param"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.logging.SimpleFormatter"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.ja.freeboard.mapper.UploadFileSQLMapper"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.ja.freeboard.mapper.BoardSQLMapper"/>
+<fullyQualifiedTypeName name="com.ja.freeboard.vo.UploadFileVo"/>
+<fullyQualifiedTypeName name="java.security.MessageDigest"/>
+<fullyQualifiedTypeName name="com.ja.freeboard.util.FBMessageDigest"/>
 </qualifiedTypeNameHistroy>
