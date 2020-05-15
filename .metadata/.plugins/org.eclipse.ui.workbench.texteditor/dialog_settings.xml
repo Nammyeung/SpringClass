@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="MemberVo"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="MemberVo"/>
+			<item value="call"/>
+			<item value="response"/>
+			<item value="FBMAILSENDER"/>
+			<item value="fbmail"/>
+			<item value="send"/>
+			<item value="안녕하세요"/>
+			<item value="loginPage"/>
 			<item value="frm_submit"/>
+			<item value="main_page"/>
+			<item value="org"/>
+			<item value="joinmember"/>
+			<item value="loginForm"/>
+			<item value="MemberVo"/>
 			<item value="form"/>
 			<item value="context"/>
-			<item value="conext"/>
-			<item value="getBoard"/>
-			<item value="read_content_page"/>
-			<item value="host"/>
-			<item value="value"/>
-			<item value="createKey"/>
-			<item value="writecontent"/>
-			<item value="uploadFileSQL"/>
-			<item value="saveFileName"/>
-			<item value="savefilename"/>
-			<item value="saveFolderName"/>
 		</list>
 		<list key="replacehistory">
 		</list>

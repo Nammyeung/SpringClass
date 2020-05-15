@@ -2,8 +2,8 @@
 <aop-reference-model>
 <aop-project name="SpringQuickStartEx"/>
 <aop-project name="ReferenceProject"/>
-<aop-project name="SpringMVCFinal"/>
 <aop-project name="SpringMVCFinal0508_3"/>
+<aop-project name="SpringMVCFinal"/>
 <aop-project name="AOPCode"/>
 <aop-project name="Test"/>
 </aop-reference-model>

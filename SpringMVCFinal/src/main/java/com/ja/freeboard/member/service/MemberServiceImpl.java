@@ -3,9 +3,11 @@ package com.ja.freeboard.member.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ja.freeboard.mapper.AuthSQLMapper;
 import com.ja.freeboard.mapper.HobbySQLMapper;
 import com.ja.freeboard.mapper.MemberSQLMapper;
 import com.ja.freeboard.util.FBMessageDigest;
+import com.ja.freeboard.vo.AuthVo;
 import com.ja.freeboard.vo.MemberVo;
 
 import java.security.*;
@@ -13,14 +15,16 @@ import java.security.*;
 @Service
 public class MemberServiceImpl {
 	
-	@Autowired
-	private MemberSQLMapper memberSQLMapper;
 	
 	@Autowired
-	private HobbySQLMapper hobbySQLMapper;
+	private MemberSQLMapper memberSQLMapper;	
+	@Autowired
+	private HobbySQLMapper hobbySQLMapper;	
+	@Autowired
+	private AuthSQLMapper authSQLMapper;
+		
 	
-	
-	public void joinMember(MemberVo vo, int [] member_hobby) {
+	public void joinMember(MemberVo vo, int [] member_hobby, AuthVo authVo) {
 		
 		String hashCode = FBMessageDigest.digest(vo.getMember_pw());
 		vo.setMember_pw(hashCode);
@@ -64,11 +68,14 @@ public class MemberServiceImpl {
 		
 		//DB연동...
 		
-		int member_key = memberSQLMapper.createKey();
-		
-		vo.setMember_no(member_key);
-		
+		int member_key = memberSQLMapper.createKey();		
+		vo.setMember_no(member_key);		
 		memberSQLMapper.insert(vo);
+		
+		authVo.setMember_no(member_key);
+		authSQLMapper.insert(authVo);
+		
+		
 		
 		//가장 큰 값 가져옴
 		
@@ -93,5 +100,10 @@ public class MemberServiceImpl {
 		return memberSQLMapper.selectByIdAndPw(vo);
 		
 	
+	}
+	
+	public void certification(String key) {
+				
+		authSQLMapper.update(key);
 	}
 }

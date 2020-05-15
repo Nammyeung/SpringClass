@@ -8,7 +8,45 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
 integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
 crossorigin="anonymous">
+
 <script type = "text/javascript">
+
+function testAjax(){
+	
+	//AJAX 호출...코드 시작
+	var xmlhttp = new XMLHttpRequest();
+	
+	xmlhttp.onreadystatechange = function() {
+		
+		if(xmlhttp.readyState==4 && xmlhttp.status == 200){
+			//alert("안녕하세요");
+			//alert(xmlhttp.responseText);
+			var box = 
+				document.getElementById("test_box");
+			
+			var obj = JSON.parse(xmlhttp.responseText);
+			
+			var ul = document.createElement("ul");
+			
+			for(var i = 0 ; i < obj.length ; i++){
+				var li = document.createElement("li");
+				li.innerText = obj[i].member_nick;
+				ul.appendChild(li);
+			}
+			
+			box.appendChild(ul);
+			
+		}
+		
+	};
+
+	xmlhttp.open("get","./testAjax.do" , true);
+	
+	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+	xmlhttp.send("v1=111&v2=222&v3=aaaaa");
+}
+
 
 function frm_submit(){
 	var frm = document.getElementById("frm");
@@ -66,7 +104,7 @@ function frm_submit(){
 					</div>
 				</div>
 				<div class = "col">
-					<input id = "id" placeholder = "이메일을 입력해주세요" name = "member_id" type = "text" class = "form-control">
+					<input id = "id" placeholder = "이메일을 입력해주세요" name = "member_id" type = "text" class = "form-control"><input type="button" value="아이디확인" onclick="testAjax()"><br>
 				</div>							
 			</div>
 			<div class = "row">
@@ -130,6 +168,11 @@ function frm_submit(){
 	</div>
 
 </form>
+
+<br>
+<div id="test_box"></div>
+
+
 
 </div>
 
