@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace : 인터페이스명 -->
+<mapper namespace = "com.ja.freeboard.mapper.UploadFileSQLMapper">
+		
+	<insert id="insert">
+	<![CDATA[
+		INSERT INTO FB_Upload_File
+		VALUES(
+			FB_Upload_File_seq.nextval,
+			#{board_no},
+			#{file_link_path},
+			#{file_real_path},
+			SYSDATE
+		)
+	
+	]]>
+	<!-- CDATA : 안쪽의 문법은 xml을 무시하겠다. -->
+	</insert>
+<!-- select는 resulttype을 명시 -->
+	<select id = "selectByBoardNo" resultType="com.ja.freeboard.vo.UploadFileVo">
+	<![CDATA[
+		SELECT * 
+		FROM FB_Upload_File 
+		WHERE board_no = #{board_no}	
+	]]>	
+	</select>
+
+
+</mapper>

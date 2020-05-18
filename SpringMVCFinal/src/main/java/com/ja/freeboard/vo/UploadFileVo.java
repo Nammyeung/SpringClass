@@ -9,12 +9,9 @@ public class UploadFileVo {
 	private String file_real_path;
 	private Date file_upload_date;
 	
-	
 	public UploadFileVo() {
 		super();
 	}
-	
-	
 	public UploadFileVo(int file_no, int board_no, String file_link_path, String file_real_path,
 			Date file_upload_date) {
 		super();

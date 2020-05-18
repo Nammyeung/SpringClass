@@ -1,6 +1,7 @@
 package com.ja.freeboard.mapper;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
@@ -8,9 +9,8 @@ import com.ja.freeboard.vo.BoardVo;
 
 public interface BoardSQLMapper {
 	
-	public int createKey();	
+	public int createKey();
 	
-	// annoation해서 select를 매핑 => 변경
 	public void insert(BoardVo boardVo);
 	
 	public BoardVo selectByNo(int no);
@@ -19,7 +19,7 @@ public interface BoardSQLMapper {
 	public int selectByTitleCount(String title);
 	
 	public List<BoardVo> selectAll(int currPage);
-	
+
 	public List<BoardVo> selectByTitle(
 			@Param("title") String title,
 			@Param("currPage") int currPage);
@@ -30,3 +30,13 @@ public interface BoardSQLMapper {
 	
 	public void updateReadCount(int no);
 }
+
+
+
+
+
+
+
+
+
+

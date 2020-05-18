@@ -10,10 +10,10 @@ public class BoardVo {
 	private int board_readcount;
 	private Date board_writedate;
 	
+	
 	public BoardVo() {
 		super();
 	}
-	
 	public BoardVo(int board_no, int member_no, String board_title, String board_content, int board_readcount,
 			Date board_writedate) {
 		super();
@@ -24,7 +24,6 @@ public class BoardVo {
 		this.board_readcount = board_readcount;
 		this.board_writedate = board_writedate;
 	}
-	
 	public int getBoard_no() {
 		return board_no;
 	}
@@ -64,4 +63,14 @@ public class BoardVo {
 	
 	
 	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+

@@ -1,18 +1,15 @@
 package com.ja.freeboard.vo;
 
 public class AuthVo {
-	
+
 	private int auth_no;
 	private int member_no;
 	private String auth_certification;
 	private String auth_key;
 	
-	
 	public AuthVo() {
 		super();
 	}
-	
-	
 	public AuthVo(int auth_no, int member_no, String auth_certification, String auth_key) {
 		super();
 		this.auth_no = auth_no;
@@ -44,6 +41,8 @@ public class AuthVo {
 	public void setAuth_key(String auth_key) {
 		this.auth_key = auth_key;
 	}
+	
+	
 	
 	
 }
