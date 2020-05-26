@@ -105,5 +105,15 @@
 		<item value="org.springsource.sts:3.9.12.202003181024-RELEASE"/>
 	</list>
 	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\admin\Desktop\NeFlex.zip"/>
+			<item value="C:\Users\admin\Downloads\SpringMVCFinal0518.zip"/>
+		</list>
 	</section>
 </section>

@@ -1,4 +1,5 @@
 #Tomcat publish data
-#Mon May 18 16:32:40 KST 2020
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\5.0.7.RELEASE\\spring-web-5.0.7.RELEASE.jar=C\:\\dev\\apache-tomcat-8.5.53\\wtpwebapps\\SpringMVCFinal\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
-org.eclipse.jst.jee.server\:SpringMVCFinal=C\:\\dev\\apache-tomcat-8.5.53\\wtpwebapps\\SpringMVCFinal
+#Tue May 26 12:15:48 KST 2020
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\5.0.7.RELEASE\\spring-web-5.0.7.RELEASE.jar=C\:\\dev\\apache-tomcat-8.5.53\\wtpwebapps\\NeFlex\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
+org.eclipse.jst.jee.server\:NeFlex=C\:\\dev\\apache-tomcat-8.5.53\\wtpwebapps\\NeFlex
+org.eclipse.jst.jee.server\:NeFlexPractice=C\:\\dev\\apache-tomcat-8.5.53\\wtpwebapps\\NeFlexPractice

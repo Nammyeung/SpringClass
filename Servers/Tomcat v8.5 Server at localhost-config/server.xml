@@ -157,7 +157,7 @@
       	
       
       
-      <Context docBase="SpringMVCFinal" path="/freeboard" reloadable="true" source="org.eclipse.jst.jee.server:SpringMVCFinal"/></Host>
+      <Context docBase="NeFlexPractice" path="/freeboard" reloadable="true" source="org.eclipse.jst.jee.server:NeFlexPractice"/><Context docBase="NeFlex" path="/neflex" reloadable="true" source="org.eclipse.jst.jee.server:NeFlex"/></Host>
     </Engine>
   </Service>
 </Server>

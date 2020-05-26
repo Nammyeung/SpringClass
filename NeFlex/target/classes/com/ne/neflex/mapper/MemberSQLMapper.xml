@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ne.neflex.mapper.MemberSQLMapper">
+	<!-- id는 메소드 명 -->
+	<select id="selectByIdAndPassword" resultType="com.ne.neflex.vo.MemberVo">
+		<![CDATA[
+			SELECT * FROM NF_MEMBER WHERE MEM_ID=#{mem_id } AND MEM_PW=#{mem_pw }
+		]]>
+	</select>
+	
+	<insert id="insertMember">
+		<![CDATA[
+			INSERT INTO NF_MEMBER VALUES(
+			#{mem_no}, 
+			#{mem_id}, 
+			#{mem_pw},
+			#{mem_name},
+			#{mem_nick},
+			#{mem_phone},
+			#{mem_email},
+			#{mem_gender},
+			#{mem_birthdate},
+			sysdate,
+			#{mem_imageurl}
+			)
+		]]>
+	</insert>
+	
+	<select id="createMem_noKey" resultType="Int">
+		SELECT NF_MEMBER_SEQ.NEXTVAL FROM DUAL
+	</select>
+	
+</mapper>

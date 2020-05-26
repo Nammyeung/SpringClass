@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="commons-dbcp"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="call"/>
-			<item value="response"/>
-			<item value="FBMAILSENDER"/>
-			<item value="fbmail"/>
-			<item value="send"/>
-			<item value="안녕하세요"/>
-			<item value="loginPage"/>
-			<item value="frm_submit"/>
-			<item value="main_page"/>
-			<item value="org"/>
-			<item value="joinmember"/>
-			<item value="loginForm"/>
-			<item value="MemberVo"/>
-			<item value="form"/>
-			<item value="context"/>
+			<item value="commons-dbcp"/>
+			<item value="commons"/>
+			<item value="certification_complete"/>
+			<item value="for"/>
+			<item value="fpr"/>
+			<item value="boxDate"/>
+			<item value="refresh"/>
+			<item value="refreshlist"/>
+			<item value="replyBox"/>
+			<item value="박스 안에 내용 지우기..."/>
+			<item value="댓글 리스트"/>
+			<item value="댓글 리스트 박스"/>
+			<item value="col-8"/>
+			<item value="div"/>
+			<item value="댓글"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="159"/>
-		<item key="DIALOG_Y_ORIGIN" value="499"/>
+		<item key="DIALOG_X_ORIGIN" value="745"/>
+		<item key="DIALOG_Y_ORIGIN" value="530"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
